@@ -8,10 +8,6 @@ public class Course {
     public Course() {
     }
 
-    public void Course(){
-
-    }
-
     public void setNumber(int num){
         this.number = num;
     }
@@ -37,6 +33,6 @@ public class Course {
     }
 
     public String toString(){
-        return null;
+        return this.getTitle() + " " + this.getNumber() + " " + this.getTitle();
     }
 }

@@ -3,15 +3,55 @@
  */
 package edu.isu.cs.cs2263;
 
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
-public class App {
+import java.awt.*;
+import java.util.ArrayList;
 
+public class App extends Application{
+
+    private ArrayList<Student> students = new ArrayList<>();
+    IOManager manager = new IOManager();
+
+    /*
+    Course memes = new Course();
+    memes.setTitle("Intro to memes");
+    memes.setSubject("Memes");
+    memes.setNumber(21);
+
+    Student Fred = new Student();
+    Student Steve = new Student();
+    Student Erica = new Student();
+    Student Jane = new Student();
+    Student Mary = new Student();
+
+    Mary.addCourse(memes);
+    Jane.addCourse(memes);
+    Erica.addCourse(memes);
+    Steve.addCourse(memes);
+    Fred.addCourse(memes);
+
+    Students.add(Mary);
+    Students.add(Jane);
+    Students.add(Erica);
+    Students.add(Steve);
+    Students.add(Fred);
+*/
     public static void main(String[] args) {
-
+        launch(args);
     }
 
     public void start(Stage stage){
-
+        stage.setTitle("Course View");
+        Button btn = new Button();
+        btn.setName("Load Data");
+        //btn.addActionListener();
+        StackPane root = new StackPane();
+        //root.getChildren().add(btn);
+        stage.setScene(new Scene(root, 300, 250));
+        stage.show();
     }
 }
